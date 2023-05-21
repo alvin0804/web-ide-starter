@@ -1,0 +1,69 @@
+@import './common';
+@import './animation';
+
+// ============= The Workbench parts =============
+@import '../components/actionBar/style';
+@import '../components/breadcrumb/style';
+@import '../components/button/style';
+@import '../components/checkbox/style';
+@import '../components/collapse/style';
+@import '../components/contextView/style';
+@import '../components/dialog/style';
+@import '../components/dropdown/style';
+@import '../components/input/style';
+@import "../components//search-input/style";
+@import '../components/list/style';
+@import '../components/menu/style';
+@import '../components/scrollBar/style';
+@import '../components/select/style';
+@import '../components/tabs/style';
+@import '../components/toolbar/style';
+@import '../components/tree/style';
+@import '../components/search/style';
+@import '../components/tooltip/style';
+@import '../components/split/style';
+
+// ============= The Workbench core component =============
+@import '../workbench/style';
+@import '../workbench/activityBar/style';
+@import '../workbench/editor/style';
+@import '../workbench/editor/welcome/style';
+@import '../workbench/menuBar/style';
+@import '../workbench/panel/style';
+@import '../workbench//searchResult/style';
+@import '../workbench/settings/style';
+@import '../workbench/sidebar/style';
+@import '../workbench/statusBar/style';
+@import '../workbench/notification/style';
+@import '../workbench/sidebar/explore/style';
+@import '../workbench/notification/statusBarView/style';
+@import '../workbench/auxiliaryBar/style';
+
+.#{$prefix} {
+    bottom: 0;
+    box-sizing: border-box;
+    font-size: 13px;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    outline: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    user-select: none;
+    width: 100%;
+}
+
+.mac {
+    font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}

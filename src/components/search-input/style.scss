@@ -1,0 +1,91 @@
+@import "mo/style/common";
+
+#{$searchInput} {
+
+  textarea {
+    background: var(--input-background);
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    color: var(--input-foreground);
+    font-family: inherit;
+    height: 24px;
+    line-height: 15px;
+    min-height: 23px;
+    outline: none;
+    overflow: hidden;
+    padding: 3px 62px 3px 4px;
+    resize: none;
+    width: 100%;
+
+    &:focus {
+      border-color: var(--focusBorder);
+
+    }
+
+    &::-webkit-scrollbar {
+      opacity: 0;
+    }
+  }
+
+  &__toolbar {
+    height: auto;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+
+    #{$actionBar} {
+      &__item {
+        color: var(--activityBar-foreground);
+        opacity: 0.7;
+        transition: opacity 0.3s;
+
+        &--checked {
+          background: var(--inputOption-activeBackground);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+
+
+
+  & &__info {
+    border: 1px solid var(--inputValidation-infoBorder);
+
+    &:active,
+    &:focus {
+      border-color: var(--inputValidation-infoBorder);
+    }
+
+    &:not(textarea) {
+      background: var(--inputValidation-infoBackground);
+    }
+  }
+
+  & &__warning {
+    border: 1px solid var(--inputValidation-warningBorder);
+
+    &:active,
+    &:focus {
+      border-color: var(--inputValidation-warningBorder);
+    }
+
+    &:not(textarea) {
+      background: var(--inputValidation-warningBackground);
+    }
+  }
+
+  & &__error {
+    border: 1px solid var(--inputValidation-errorBorder);
+
+    &:active,
+    &:focus {
+      border-color: var(--inputValidation-errorBorder);
+    }
+
+    &:not(textarea) {
+      background: var(--inputValidation-errorBackground);
+    }
+  }
+}

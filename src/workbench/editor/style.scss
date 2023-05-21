@@ -1,0 +1,179 @@
+@import 'mo/style/common';
+
+#{$editor} {
+    background: var(--editorGroup-background);
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+
+    // &__group-breadcrumb,
+    &__group-container {
+        background-color: var(--editor-background);
+        color: var(--editor-foreground);
+    }
+
+    &__group {
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
+
+    &__group-container {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 71px;
+    }
+
+    &__group-container-no-handler-area {
+        top: 36px;
+    }
+
+    &__group-header {
+        background: var(--editorGroupHeader-tabsBackground);
+        border-bottom: 1px solid var(--editorGroupHeader-tabsBorder);
+        display: flex;
+        position: relative;
+
+        #{$tab}__item:hover {
+            background: var(--tab-hoverBackground);
+        }
+    }
+
+    &__group-tabs {
+        flex-grow: 1;
+        height: 35px;
+
+        #{$tab}__item--active {
+            border-top: 1px solid var(--tab-activeBorder);
+        }
+    }
+
+    &__group-actions {
+        display: flex;
+
+        &-item {
+            align-items: center;
+            color: var(--icon-foreground);
+            cursor: pointer;
+            display: flex;
+            height: 35px;
+            justify-content: center;
+            padding: 0 8px 0 4px;
+
+            &--disabled {
+                cursor: default;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &__group-handler {
+        display: flex;
+        box-sizing: border-box;
+        padding: 5px 8px;
+        background-color: var(--tab-activeBackground);
+        height: 35px;
+        // position: relative;
+
+        // &__lock {
+        //     width: 100%;
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     right: 0;
+        //     z-index: 9;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     background-color: var(--tab-activeBackground);
+        //     filter: blur(10);
+        //     opacity: 0.8;
+        // }
+
+        &-left-area {
+            position: absolute;
+            left: 0;
+            display: flex;
+            z-index: 9;
+        }
+
+        &-right-area {
+            position: absolute;
+            right: 0;
+            display: flex;
+        }
+
+        &-item {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            height: 25px;
+            justify-content: center;
+            position: relative;
+            margin: auto 2px;
+
+            &__lock {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 9;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--button-background);
+                filter: blur(10);
+                opacity: .9;
+                visibility: hidden;
+            }
+            &__lock-show {
+                visibility: visible;
+                cursor: default;
+            }
+
+            &__inner {
+                box-sizing: border-box;
+                padding: 0 6px 0 8px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background-color: var(--button-background);
+                color: var(--button-foreground);
+
+                &:hover {
+                    background-color: var(--button-background);
+                    opacity: 0.8;
+                }
+            }
+
+            & .codicon {
+                padding-right: 4px;
+            }
+
+        }
+
+    }
+
+    // &__group-breadcrumb {
+    //     height: 22px;
+    //     line-height: 22px;
+    //     padding-left: 20px;
+    // }
+
+    #{prefix($tabSwitcher)} {
+        .tab-button {
+            &--active {
+                background-color: var(--tab-activeBackground);
+                color: var(--tab-activeForeground);
+            }
+        }
+    }
+}

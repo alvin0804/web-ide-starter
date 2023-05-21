@@ -1,0 +1,57 @@
+{
+    "code": 200,
+    "message": "success",
+    "data": {
+        "id": 0,
+        "name": "alvin(00000001)",
+        "fileType": "RootFolder",
+        "location": "",
+        "isLeaf": false,
+        "children": [
+            {
+                "id": 1,
+                "name": "test",
+                "location": "test",
+                "fileType": "File",
+                "isLeaf": true
+            }, {
+                "id": 2,
+                "name": "test1",
+                "fileType": "File",
+                "location": "test1",
+                "isLeaf": true
+            }, {
+                "id": 3,
+                "name": "test2",
+                "fileType": "File",
+                "location": "test2",
+                "isLeaf": true
+            }, {
+                "id": 5,
+                "name": "Sub Folder",
+                "isLeaf": false,
+                "fileType": "Folder",
+                "location": "Sub Folder",
+                "children": [{
+                    "id": 11,
+                    "name": "test51",
+                    "fileType": "File",
+                    "location": "Sub Folder/test51",
+                    "isLeaf": true
+                }, {
+                    "id": 12,
+                    "name": "test52",
+                    "location": "Sub Folder/test52",
+                    "isLeaf": true,
+                    "fileType": "File"
+                }, {
+                    "id": 13,
+                    "name": "test53",
+                    "location": "Sub Folder/test53",
+                    "isLeaf": true,
+                    "fileType": "File"
+                }]
+            }
+        ]
+    }
+}
